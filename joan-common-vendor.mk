@@ -567,21 +567,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     LGDataFeature_vendor \
     activity_recognition.msm8998 \
-    libAlacSwDec \
-    libApeSwDec \
-    libFlacSwDec \
-    libI420colorconvert \
-    libOmxAacDec \
-    libOmxAlacDec \
-    libOmxAlacDecSw \
-    libOmxAmrDec \
-    libOmxAmrwbplusDec \
-    libOmxApeDec \
-    libOmxApeDecSw \
-    libOmxEvrcDec \
-    libOmxG711Dec \
-    libOmxQcelp13Dec \
-    libOmxWmaDec \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
@@ -602,7 +587,6 @@ PRODUCT_PACKAGES += \
     libmdmdetect \
     libmdsprpc \
     libminkdescriptor \
-    libmm-color-convertor \
     libmmosal \
     libqcbor \
     libqcci_legacy \
@@ -624,16 +608,13 @@ PRODUCT_PACKAGES += \
     libsensor_reg \
     libsns_low_lat_stream_stub \
     libssc_default_listener \
-    libstagefright_soft_qtiflacdec \
     libvpphvx \
     sensor_calibrate \
     libasphere \
     vendor.qti.hardware.data.latency@1.0 \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.latency@2.0 \
-    libOmxDsdDec \
     libadm \
-    libdsd2pcm \
     com.qualcomm.qti.dpm.api@1.0_vendor \
     com.qualcomm.qti.imscmservice@1.0 \
     com.qualcomm.qti.imscmservice@2.0 \
