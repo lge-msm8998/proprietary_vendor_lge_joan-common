@@ -52,27 +52,6 @@ android_app_import {
 }
 
 cc_prebuilt_library_shared {
-	name: "com.dsi.ant@1.0-impl",
-	owner: "lge",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/hw/com.dsi.ant@1.0-impl.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/hw/com.dsi.ant@1.0-impl.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	relative_install_path: "hw",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libaudioparsers",
 	owner: "lge",
 	strip: {
@@ -88,6 +67,24 @@ cc_prebuilt_library_shared {
 	},
 	compile_multilib: "both",
 	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "com.dsi.ant@1.0-impl",
+	owner: "lge",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/hw/com.dsi.ant@1.0-impl.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	relative_install_path: "hw",
 	prefer: true,
 	soc_specific: true,
 }
@@ -146,27 +143,6 @@ dex_import {
 }
 
 dex_import {
-	name: "com.qualcomm.qti.imscmservice-V2.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.imscmservice-V2.1-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.imscmservice-V2.2-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
 	name: "dpmapi",
 	owner: "lge",
 	jars: ["proprietary/system_ext/framework/dpmapi.jar"],
@@ -191,13 +167,6 @@ dex_import {
 	name: "vendor.qti.hardware.alarm-V1.0-java",
 	owner: "lge",
 	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.latency-V2.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.latency-V2.0-java.jar"],
 	system_ext_specific: true,
 }
 
